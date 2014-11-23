@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup.py
+index 441a52d..c8e93e9 100755
+--- a/setup.py
++++ b/setup.py
+@@ -26,8 +26,6 @@ import os.path
+ 
+ from scripts import setupcommon as common
+ 
+-from scripts import ez_setup
+-ez_setup.use_setuptools()
+ import setuptools
+ 
+ 

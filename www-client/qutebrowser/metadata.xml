@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription lang="en">
+		A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit.
+
+		qutebrowser is a keyboard-focused browser with with a minimal GUI. It’s
+		based on Python, PyQt5 and QtWebKit and free software, licensed under
+		the GPL.
+
+		It was inspired by other browsers/addons like dwb and
+		Vimperator/Pentadactyl.
+	</longdescription>
+	<maintainer>
+		<email>info@posativ.org</email>
+	</maintainer>
+</pkgmetadata>
