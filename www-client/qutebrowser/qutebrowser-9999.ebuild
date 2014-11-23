@@ -15,13 +15,14 @@ HOMEPAGE="http://qutebrowser.org/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+jpeg gstreamer"
+IUSE="+doc +jpeg gstreamer"
 
 RDEPEND="
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/pypeg2[${PYTHON_USEDEP}]
 	dev-python/PyQt5[printsupport,network,webkit,widgets]
+	doc? ( app-text/asciidoc )
 	jpeg? ( dev-qt/qtgui:5[jpeg] )
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
 "
@@ -29,6 +30,12 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/remove-ez-setup.patch"
+}
+
+python_compile_all() {
+	if use doc; then
+		python scripts/asciidoc2html.py
+	fi
 }
 
 python_install_all() {
