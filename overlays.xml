@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>qutebrowser</name>
+		<description>Qutebrowser and stuff</description>
+		<homepage>https://github.com/posativ/qutebrowser-overlay</homepage>
+		<owner>
+			<email>info@posativ.org</email>
+		</owner>
+		<source type="git">https://github.com/posativ/qutebrowser-overlay.git</source>
+	</repo>
+</repositories>

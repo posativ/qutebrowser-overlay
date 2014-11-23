@@ -1,0 +1,13 @@
+qutebrowser overlay
+-------------------
+
+A dedicated overlay to install qutebrowser on Gentoo. Add the overlay
+with Layman:
+
+    # wget https://raw.githubusercontent.com/posativ/qutebrowser-overlay/master/overlays.xml -O /etc/layman/overlays/qutebrowser.xml
+    # layman -a qutebrowser
+
+Afterwards, install qutebrowser:
+
+    # emerge -av qutebrowser
+
