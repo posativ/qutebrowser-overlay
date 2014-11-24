@@ -5,7 +5,7 @@
 EAPI=5
 PYTHON_COMPAT=( python3_4 )
 
-inherit git-r3 toolchain-funcs distutils-r1 eutils
+inherit git-r3 toolchain-funcs distutils-r1
 
 EGIT_REPO_URI="https://github.com/The-Compiler/qutebrowser.git"
 
@@ -27,10 +27,6 @@ RDEPEND="
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
 "
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}/remove-ez-setup.patch"
-}
 
 python_compile_all() {
 	if use doc; then
