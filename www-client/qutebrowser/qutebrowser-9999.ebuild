@@ -15,23 +15,21 @@ HOMEPAGE="http://qutebrowser.org/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+doc +jpeg gstreamer"
+IUSE="jpeg gstreamer"
 
 RDEPEND="
+	app-text/asciidoc
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/pypeg2[${PYTHON_USEDEP}]
 	dev-python/PyQt5[printsupport,network,webkit,widgets]
-	doc? ( app-text/asciidoc )
 	jpeg? ( dev-qt/qtgui:5[jpeg] )
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
 "
 DEPEND="${RDEPEND}"
 
 python_compile_all() {
-	if use doc; then
-		python scripts/asciidoc2html.py
-	fi
+	python scripts/asciidoc2html.py
 }
 
 python_install_all() {
