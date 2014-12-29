@@ -16,7 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="jpeg gstreamer"
 
+
+DEPEND="
+	app-text/asciidoc
+"
 RDEPEND="
+	${DEPEND}
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/pypeg2[${PYTHON_USEDEP}]
@@ -24,9 +29,11 @@ RDEPEND="
 	jpeg? ( dev-qt/qtgui:5[jpeg] )
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
 "
-DEPEND="${RDEPEND}"
 
 python_install_all() {
+	a2x -f manpage doc/qutebrowser.1.asciidoc
+	doman doc/qutebrowser.1
+
 	dodoc COPYING README.asciidoc
 	distutils-r1_python_install_all
 }
