@@ -22,6 +22,7 @@ RDEPEND="
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/pypeg2[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/PyQt5[printsupport,network,webkit,widgets]
 	jpeg? ( dev-qt/qtgui:5[jpeg] )
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
