@@ -35,5 +35,9 @@ python_install_all() {
 	doman doc/qutebrowser.1
 
 	dodoc COPYING README.asciidoc
+
+	insinto "/usr/share/applications"
+	doins "${PN}.desktop"
+
 	distutils-r1_python_install_all
 }
