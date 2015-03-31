@@ -34,5 +34,8 @@ python_compile_all() {
 }
 
 python_install_all() {
+	insinto "/usr/share/applications"
+	doins "${PN}.desktop"
+
 	distutils-r1_python_install_all
 }
