@@ -23,7 +23,7 @@ RDEPEND="
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/pypeg2[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/PyQt5[gui,printsupport,network,webkit,widgets]
+	dev-python/PyQt5[gui,printsupport,network,webkit,widgets,${PYTHON_USEDEP}]
 	jpeg? ( dev-qt/qtgui:5[jpeg] )
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
 "
